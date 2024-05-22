@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="/home/madirinavyasri/Downloads/style.css">
+<script src="https://kit.fontawesome.com/3fd73ad1f0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+	<div class="container">
+		<nav>
+		<img src="/home/madirinavyasri/Downloads/Navya.jpeg" class="logo">
+			<ul id="sidemenu">
+				<li><a href="#header">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#Resume">Resume</a></li>
+				<li><a href="#contact">Contact</a></li>
+				<i class="fas fa-times" onclick="closemenu()"></i>
+			</ul>
+			<i class="fas fa-bars" onclick="openmenu()"></i>
+		</nav>
+		<div class="header-text">
+		<h2>Hi , <br>This is <span>Navyasri Madiri.</span></h2>
+		<h3>Bachelor of Technology.</h3>
+		<h3>RGUKT-ONGOLE,IIIT,AP.</h3>
+		</div>
+	</div>
+</div>
+<div id="about">
+	<div class="contaniner">
+		<div class="row">
+			<div class="about-col-1">
+			<img src="/home/madirinavyasri/Downloads/navya.jpeg">
+			</div>
+			<div class="about-col-2">
+				<h1 class="subtitle">About Me</h1>
+			<div class="tab-titles">
+				<p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+				<p class="tab-links" onclick="opentab('Education')">Education</p>
+			</div>
+			<div class="tab-contents active-tab " id="Skills">
+			<ul>
+				<li><span>Web Development</span><br>Html<br> Css<br> Bootstrap<br>SQL</li>
+				<li><span>Python</span><br>Problem Solving</li>
+			</ul>
+			</div>
+			<div class="tab-contents" id= "Education">
+			<ul>
+				<li><span>Rajiv Gandhi University of Knowledge Technologies-Ongole</span><br>Bachelor of Technology<br>2022-Present<br>CGPA:9.2</li>
+				<li><span>Rajiv Gandhi University of Knowledge Technologies-Ongole</span><br>Pre University Course<br>2019-2021<br>CGPA:9.96</li>
+				<li><span>Boyapati Sivarama Krishnayya Municipal High School-Bhrugubanda</span><br>Secondary School of Education<br>2018-2019<br>CGPA:10.0</li>
+			</ul>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!----contact-->
+<div id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="contact-left">
+					<h1 class="subtitle">Contact Me</h1>
+					<p><i class="fa-regular fa-paper-plane"></i>madirinavyasri@gmail.com</p>
+					<p><i class="fa-solid fa-phone-flip"></i>7893389102</p>
+					<div class="social-icons">
+						<a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+						<a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+						<a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+						<a href="#"><i class="fa-brands fa-telegram"></i></a>
+					</div>
+			</div>
+			<div class="contact-right">
+				<form name="submit-to-google-sheet">
+							<input type="text" name="Name" placeholder="Your Name" required>
+							<input type="email" name="Email" placeholder="Your Email" required>
+							<textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+							<button type="submit" class="btn btn2">Submit</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="copyright">
+		<p>Copyright @ Navyasri <i class="fa-regular fa-heart"></i></p>
+	</div>
+</div>
+<script>
+	var tablinks=document.getElementsByClassName("tab-links");
+	var tabcontents=document.getElementsByClassName("tab-contents");
+	function opentab(tabname){
+		for(tablink of tablinks){
+			tablink.classList.remove("active-link")
+		}
+		for(tabcontent of tabcontents){
+			tabcontent.classList.remove("active-tab")
+		}
+		event.currentTarget.classList.add("active-link");
+		document.getElementById(tabname).classList.add("active-tab");
+	}
+</script>
+<script>
+	var sidemenu=document.getElementById("sidemenu");
+	function openmenu(){
+		sidemenu.style.right="3px";
+	}
+	function closemenu(){
+		sidemenu.style.right="-200px";
+	}
+</script>
+</body>
+</html>
